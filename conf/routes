@@ -1,0 +1,7 @@
+GET        /                    controllers.Application.index
+
+GET        /movies              controllers.Application.movies(year: Option[Int])
+GET        /movies/:id          controllers.Application.movie(id: Long)
+GET        /years               controllers.Application.years
+
+GET        /assets/*file        controllers.Assets.at(path="/public", file)
