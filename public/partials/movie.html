@@ -1,0 +1,38 @@
+<div class="row movie-details">
+    <div class="small-12 medium-10 large-8 columns movie">
+        <h1>{{movie.name}}</h1>
+
+        <div class="poster">
+            <img ng-src="/images/posters/{{movie.posterURL}}" alt="{{movie.name}}" />
+        </div>
+
+        <div class="badges">
+            <img ng-src="{{movie.yearBadgeUrl}}" alt="{{movie.year}}">
+            <a ng-href="http://www.imdb.com/title/{{movie.imdbID}}/">
+                <img ng-src="{{movie.ratingBadgeUrl}}" alt="IMDb Rating {{movie.rating}}">
+            </a>
+            <img ng-src="{{movie.metascoreBadgeUrl}}" alt="Metascore {{movie.metascore}}">
+            <img ng-src="{{movie.ratedBadgeUrl}}" alt="Rated {{movie.rated}}">
+        </div>
+
+        <p class="plot">
+            {{movie.plot}}
+        </p>
+
+        <div class="details">
+            <dl>
+                <dt>Genre</dt>
+                <dd>{{movie.genre}}</dd>
+                <dt>Director</dt>
+                <dd>{{movie.director}}</dd>
+                <dt>Writer(s)</dt>
+                <dd>{{movie.writer}}</dd>
+                <dt>Actors</dt>
+                <dd>{{movie.actors}}</dd>
+                <dt>Runtime</dt>
+                <dd>{{movie.runtime}}</dd>
+            </dl>
+        </div>
+        <a href="/#/movies" class="button small radius"><i class="fi-arrow-left"></i> Back to movies list</a>
+    </div>
+</div>

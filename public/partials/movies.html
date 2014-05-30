@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="small-12 columns">
+        <h1>Movies</h1>
+    </div>
+</div>
+
+<div class="row">
+    <form>
+        <div class="large-12 medium-12 columns">
+            <input type="search" ng-model="search" placeholder="Search movies: name, release year etc.">
+        </div>
+    </form>
+</div>
+
+<div class="row">
+    <div class="button-bar large-12 colums">
+        <ul class="button-group radius">
+            <li>
+                <a href="/#/movies" class="button">All</a>
+            </li>
+            <li ng-repeat="year in years">
+                <a ng-href="/#/movies?year={{year}}" class="button">{{year}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="row movies-container" masonry='{"gutter": 20}' item-selector=".movie" column-width="300" preserve-order>
+    <div class="masonry-brick movie" ng-repeat="movie in movies | filter:search">
+        <div class="poster">
+            <a ng-href="/#/movies/{{movie.id}}">
+                <img ng-src="/images/posters/{{movie.posterURL}}" alt="{{movie.name}}" />
+            </a>
+        </div>
+        <span class="name"><a ng-href="/#/movies/{{movie.id}}">{{movie.name}}</a></span>
+        <div class="badges">
+            <img ng-src="{{movie.yearBadgeUrl}}" alt="{{movie.year}}">
+            <a ng-href="http://www.imdb.com/title/{{movie.imdbID}}/">
+                <img ng-src="{{movie.ratingBadgeUrl}}" alt="IMDb Rating {{movie.rating}}">
+            </a>
+        </div>
+    </div>
+</div>
+<div class="row total">
+    <div class="small-12 columns">
+        Total number of movies: {{movies.length}}
+    </div>
+</div>

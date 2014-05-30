@@ -1,0 +1,40 @@
+.button-bar {
+  margin-left: 15px;
+}
+
+.movies-container {
+  padding-left: 15px;
+
+  .movie {
+    margin-bottom: 1rem;
+
+    .poster, .badges, .name {
+      display: block;
+    }
+
+    .poster {
+      height: 28rem;
+    }
+
+    .name {
+      margin: 0.5rem 0;
+      font-weight: bold;
+    }
+  }
+}
+
+.total {
+  padding: 20px 0;
+}
+
+@media only screen and (max-width: 40em) {
+  .movies-container {
+    padding-left: 10px;
+  }
+}
+
+.movie-details {
+  .poster, .badges {
+    margin-bottom: 1rem;
+  }
+}

@@ -1,5 +1,23 @@
-@main("Movies") {
+<!DOCTYPE html>
 
-    Movies
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Movies-example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="@routes.Assets.at("images/favicon.ico")">
+        <link rel="stylesheet" href="@routes.WebJarAssets.at(WebJarAssets.locate("foundation-icons.css"))">
+        <link rel="stylesheet" href="@routes.WebJarAssets.at(WebJarAssets.locate("foundation.min.css"))">
+        <link rel="stylesheet" href="@routes.Assets.at("css/app.css")">
+    </head>
+    <body>
+        <div class="container">
+            <div ng-view></div>
+        </div>
 
-}
+        <script src="@routes.Assets.at("js/lib/imagesloaded.pkgd.min.js")"></script>
+        <script src="@routes.WebJarAssets.at(WebJarAssets.locate("masonry.pkgd.min.js"))"></script>
+        @Html(org.webjars.play.RequireJS.setup("js/app"))
+    </body>
+</html>
