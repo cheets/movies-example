@@ -1,7 +1,8 @@
-GET        /                    controllers.Application.index
+GET        /webjars/*file        controllers.WebJarAssets.at(file)
 
-GET        /movies              controllers.Application.movies(year: Option[Int])
-GET        /movies/:id          controllers.Application.movie(id: Long)
-GET        /years               controllers.Application.years
+GET        /                     controllers.Application.index
+GET        /movies               controllers.Application.movies(year: Option[Int])
+GET        /movies/:id           controllers.Application.movie(id: Long)
+GET        /years                controllers.Application.years
 
-GET        /assets/*file        controllers.Assets.at(path="/public", file)
+GET        /*file                controllers.Assets.at(path="/public", file)
