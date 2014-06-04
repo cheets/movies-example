@@ -19,5 +19,14 @@
         <script src="@routes.Assets.at("js/lib/imagesloaded.pkgd.min.js")"></script>
         <script src="@routes.WebJarAssets.at(WebJarAssets.locate("masonry.pkgd.min.js"))"></script>
         @Html(org.webjars.play.RequireJS.setup("js/app"))
+
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-51632872-1', 'movies-example.herokuapp.com');
+        ga('send', 'pageview');
+        </script>
     </body>
 </html>
